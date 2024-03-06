@@ -53,10 +53,17 @@ def enc():
     x = input("input pls right here: ")
     x = x.encode('utf-8')
     x = ''.join(format(byte, '08b') for byte in x)
+    print(x)
     leng = len(x)
+    print(leng)
     mod = leng % 6
+    print(mod)
     if mod != 0:
-        pad = leng % 6
+        pad = 6 - mod
+    else:
+        pad = 0
+    if pad != 0:
+        print(pad)
         for _ in range (pad):
             x += "00"
     length = len(x)
@@ -84,7 +91,8 @@ def enc():
         letter = var.decode()
         result += letter
         l += 6
-    for _ in range (mod):
+    pad = int(pad/2)
+    for _ in range (pad):
         result += "="
     print(result)
 if __name__ == "__main__":
