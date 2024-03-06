@@ -53,9 +53,7 @@ def enc():
     x = input("input pls right here: ")
     x = x.encode('utf-8')
     x = ''.join(format(byte, '08b') for byte in x)
-    print(x)
     leng = len(x)
-    print(len(x))
     mod = leng % 6
     if mod != 0:
         pad = leng % 6
