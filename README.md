@@ -6,7 +6,7 @@ base64 encoder and decoder in python
 - Run it using `Python3 base.py` after cd-ing in the directory the python script is
 - select 1 for encoding or 2 for decoding
 - input the text
-- the program will spit out the base64 version
+- the program will spit out the base64 version (or the original one if decode)
 
 
 ### Note
